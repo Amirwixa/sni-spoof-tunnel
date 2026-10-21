@@ -1,4 +1,3 @@
-cat << 'EOF' > sni-tunnel.sh
 #!/usr/bin/env bash
 # ==============================================================================
 # Project: SNI-Spoof-Tunnel
@@ -409,4 +408,3 @@ case "$1" in
   logs)    journalctl -u "$SERVICE_NAME" -f -n 30;;
   *)       menu;;
 esac
-EOF
