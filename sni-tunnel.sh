@@ -68,10 +68,10 @@ download_binary() {
   fi
   mkdir -p "$APP_DIR"
   echo -e "${CYAN}[*] Downloading latest sni-spoof-rs binary...${NC}" >&2
-  local url="https://github.com/therealaleph/sni-spoofing-rust/releases/download/v1.0.2/sni-spoof-rs-linux-amd64"
+  local url="https://raw.githubusercontent.com/Amirwixa/sni-spoof-tunnel/main/bin/sni-spoof-rs"
   if ! wget -q "$url" -O "$BIN_PATH"; then
     echo -e "${YELLOW}[!] Fallback to static musl build...${NC}" >&2
-    wget -q "https://github.com/therealaleph/sni-spoofing-rust/releases/download/v1.0.2/sni-spoof-rs-linux-amd64-musl" -O "$BIN_PATH"
+    wget -q "https://raw.githubusercontent.com/Amirwixa/sni-spoof-tunnel/main/bin/sni-spoof-rs-musl" -O "$BIN_PATH"
   fi
   chmod +x "$BIN_PATH"
   echo -e "${GREEN}[+] Binary installed successfully at $BIN_PATH${NC}" >&2
